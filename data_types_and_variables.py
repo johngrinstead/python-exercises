@@ -28,7 +28,7 @@ google_hrs = 6
 
 amazon_hrs = 4
 
-total_pay = (google_pay + google_hrs) + (amazon_pay + amazon_hrs) + (facebook_pay + facebook_hrs)
+total_pay = (google_pay * google_hrs) + (amazon_pay * amazon_hrs) + (facebook_pay * facebook_hrs)
 
 print(total_pay)
 
