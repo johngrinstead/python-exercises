@@ -85,3 +85,59 @@ fruits_with_letter_a = [fruit for fruit in fruits if fruit.count("a") >= 1]
 fruits_with_letter_a
 
 
+# Exercise 10 - Make a variable named even_numbers that holds only the even numbers 
+
+even_numbers = [fruit for fruit in fruits if len(fruit) % 2 == 0 ]
+
+even_numbers
+
+
+# Exercise 11 - Make a variable named odd_numbers that holds only the odd numbers
+
+odd_numbers = [fruit for fruit in fruits if len(fruit) % 2 == 1]
+
+odd_numbers
+
+
+# Exercise 12 - Make a variable named positive_numbers that holds only the positive numbers
+
+positive_numbers = [number for number in numbers if number > 0]
+
+positive_numbers
+
+
+# Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
+
+negative_numbers = [number for number in numbers if number < 0]
+
+negative_numbers
+
+
+# Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
+
+two_digits = [number for number in numbers if (number >= 10 or number <= -10)]
+
+two_digits
+
+
+# Exercise 15 - Make a variable named numbers_squared that contains the numbers list with each element squared. Output is [4, 9, 16, etc...]
+
+numbers_squared = [(number * number) for number in numbers]
+
+numbers_squared
+
+
+# Exercise 16 - Make a variable named odd_negative_numbers that contains only the numbers that are both odd and negative.
+
+odd_negative_numbers = [number for number in numbers if (number % 2 == 1 and number < 0)]
+
+odd_negative_numbers
+
+
+# Exercise 17 - Make a variable named numbers_plus_5. In it, return a list containing each number plus five. 
+
+number_plus_5 = [(number + 5) for number in numbers]
+
+number_plus_5
+
+
