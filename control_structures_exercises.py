@@ -101,3 +101,13 @@ for number in range(1, 11):
 for number in range(1, 10):
     print(str(number) * number)
 
+## break and continue
+
+#Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+
+for number in range (1, 51):
+    if number % 2 == 1 and number == 27:
+        print(f'Yikes! Skipping number: {number}')
+        continue
+    elif number % 2 == 1:
+        print(f'Here is an odd number: {number}')
