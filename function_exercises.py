@@ -57,3 +57,68 @@ def handle_commas(number):
 handle_commas('1,234,456')
 
 
+## 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
+
+def get_letter_grade(grade):
+    if grade >= 90:
+        print('A')
+    elif grade >= 80:
+        print('B')
+    elif grade >= 70:
+        print('C')
+    elif grade >= 60:
+        print('D')
+    else:
+        print('F')
+        
+get_letter_grade(99)
+
+
+## 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
+
+def remove_vowels(word):
+    for letter in word:
+        if is_vowel(letter) == True:
+            return word.replace(letter, '')
+        
+remove_vowels('John')
+
+
+## 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
+#-anything that is not a valid python identifier should be removed
+#-leading and trailing whitespace should be removed
+#-everything should be lowercase
+#-spaces should be replaced with underscores
+#for example:
+    #-Name will become name
+
+    #-First Name will become first_name
+
+    #-% Completed will become completed
+
+def normalize_name(name):
+    name = name.strip()
+    for letter in name:
+        if letter == ' ':
+            name = name.replace(letter, '_')
+        elif letter.lower() not in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z']:
+            name = name.replace(letter, '')
+    return name.lower()
+
+normalize_name('    John Allen Grinstead !@#$$.  ')
+
+## 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+#cumulative_sum([1, 1, 1]) returns [1, 2, 3]
+#cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+def cumulative_sum(numbers):
+    sum = 0
+    new_list = []
+    
+    for number in numbers:
+        sum += number
+        new_list.append(sum)
+    return new_list
+        
+cumulative_sum([1,2,3,4])
+
