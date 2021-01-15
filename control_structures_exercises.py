@@ -105,12 +105,67 @@ for number in range(1, 10):
 
 #Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 
-for number in range (1, 51):
-    if number % 2 == 1 and number == 27:
-        print(f'Yikes! Skipping number: {number}')
-        continue
-    elif number % 2 == 1:
-        print(f'Here is an odd number: {number}')
+while True:
+    user_number = input("Please enter an odd number between 1 and 50")
+    if user_number.isdigit():
+        user_number = int(user_number)
+        if user_number % 2 == 0: # if it's even
+            continue
+        break
 
+i = 1
+while i <= 50:
+    if i == user_number:
+        print(f"Yikes! Skipping number: {i}")
+        i += 2
+        continue
+    print(f"Here is an odd number: {i}")
+    i += 2
+
+
+#The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, also note that the input function returns a string, so you'll need to convert this to a numeric type.)
+
+# enter a positive number
+while True:
+    user_number = input("Please enter a positive number: ")
+    if user_number.isdigit():
+        user_number = int(user_number)
+        if user_number <= 0:
+            continue
+        break
+
+for i in range(0, user_number + 1):
+    print(i)
+
+
+## Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1.
+
+while True:
+    user_number = input("Please enter a positive number: ")
+    if user_number.isdigit():
+        user_number = int(user_number)
+        if user_number <= 0:
+            continue
+        break
+
+for i in range(user_number, 0, -1):
+    print(i)
+
+
+## One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
+#Write a program that prints the numbers from 1 to 100.
+#For multiples of three print "Fizz" instead of the number
+#For the multiples of five print "Buzz".
+#For numbers which are multiples of both three and five print "FizzBuzz".
+
+for i in range(1, 101):
+    if i % 3 and i % 5 == 0:
+        print('FizzBuzz')
+    if i % 3 == 0:
+        print('Fizz')
+    elif i % 5 == 0:
+        print('Buzz')
+    else:
+        print(i)
 
 
