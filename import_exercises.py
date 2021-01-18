@@ -58,3 +58,32 @@ for user in profiles:
 print(count)
 
 
+# D. Grand total of balances for all users
+
+total = 0
+
+balances = []
+
+balance_float = []
+
+for user in profiles:
+    balances.append(user['balance'])
+    
+for balance in balances:
+    balance = balance.replace('$', '')
+    balance = balance.replace(',', '')
+    balance = float(balance)
+    balance_float.append(balance)
+    
+grand_total = sum(balance_float)
+
+print(grand_total)
+
+
+# E. Average balance per user
+
+avg_total = sum(balance_float) / len(balance_float)
+
+print(round(avg_total, 2))
+
+
