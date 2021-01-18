@@ -87,3 +87,54 @@ avg_total = sum(balance_float) / len(balance_float)
 print(round(avg_total, 2))
 
 
+# F. User with the lowest balance
+
+lowest_balance = profiles[0]['balance']
+
+lowest_balance_user = profiles[0]['name']
+
+for user in profiles:
+    if user['balance'] < lowest_balance:
+        lowest_balance = user['balance']
+        lowest_balance_user = user['name']
+
+print(lowest_balance_user)
+print(lowest_balance)
+
+
+# G. User with the highest balance
+
+highest_balance = profiles[0]['balance']
+
+highest_balance_user = profiles[0]['name']
+
+for user in profiles:
+    if user['balance'] > highest_balance:
+        highest_balance = user['balance']
+        highest_balance_user = user['name']
+        
+print(highest_balance_user)
+print(highest_balance)
+
+
+# H. Most common favorite fruit
+
+from collections import Counter
+
+favorite_fruits = []
+
+
+
+for user in profiles:
+    favorite_fruits.append(user['favoriteFruit'])
+    most_favorite_fruit = max(Counter(favorite_fruits))
+    
+print(most_favorite_fruit)
+
+# I. Least most common favorite fruit
+
+least_most_favorite = min(Counter(favorite_fruits))
+
+print(least_most_favorite)
+
+
