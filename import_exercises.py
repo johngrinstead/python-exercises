@@ -138,3 +138,23 @@ least_most_favorite = min(Counter(favorite_fruits))
 print(least_most_favorite)
 
 
+# J. Total number of unread messages for all users
+
+greetings = []
+
+amount_of_messages = []
+
+total_messages = 0
+
+for user in profiles:
+    greetings.append(user['greeting'])
+    
+for greeting in greetings:
+    amount_of_messages = [int(i) for i in greeting.split() if i.isdigit()]
+    for n in amount_of_messages:
+        total_messages = total_messages + n
+
+    
+print(total_messages)
+
+
